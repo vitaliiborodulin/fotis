@@ -1,0 +1,38 @@
+.cap {
+	text-align: center;
+
+	&__item {
+		padding-top: 50px;
+		@include media-breakpoint-down(sm) {padding-top: 47px;}
+		margin-bottom: 35px;
+
+		&--1 {
+			background: url(../img/dest/cap-1.svg) no-repeat top center;
+		}
+		&--2 {
+			background: url(../img/dest/cap-2.svg) no-repeat top center;
+		}
+		&--3 {
+			background: url(../img/dest/cap-3.svg) no-repeat top center;
+			margin-bottom: 0;
+		}
+	}
+
+	&__title {
+		margin-bottom: 12px;
+		font-size: 20px;
+		@include media-breakpoint-down(sm) { font-size: 16px; margin-bottom: 10px;}
+		font-weight: 700;
+
+		color: $accent;
+	}
+
+	&__descr {
+		max-width: 304px;
+		margin: 0 auto;
+		font-size: 16px;
+		line-height: 22px;
+		@include media-breakpoint-down(sm) { font-size: 14px; line-height: 20px;}
+		color: $textcolor;
+	}
+}

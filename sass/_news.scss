@@ -1,0 +1,11 @@
+.news {
+	min-height: 366px;
+	color: #fff;
+	background-color: #717E85;
+
+	&__item {
+		text-align: center;
+		// border: 1px solid #B8C8D0;
+		padding: 50px;
+	}
+}

@@ -1,0 +1,106 @@
+.adress {
+
+	.section-title {
+		@include media-breakpoint-down(sm) { margin-bottom: 25px; }
+	}
+
+	&__list {
+		min-height: 250px;
+		margin-bottom: 17px;
+		@include media-breakpoint-down(lg) { margin-bottom: 12px; }
+	}
+
+	&__item {
+		// max-width: 264px;
+		// min-height: 217px;
+		background: #FFFFFF;
+		border-radius: 4px;
+		box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		height: 79px;
+		border-bottom: 1px solid #DCE4E9;
+	}
+
+	&__descr {
+		padding: 20px 23px;
+		font-size: 14px;
+		line-height: 20px;
+		color: #717E85;
+	}
+
+	&__title {
+		font-size: 16px;
+		line-height: 18px;
+		font-weight: 700;
+		color: #4C585D;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		position: relative;
+		padding-left: 18px;
+		margin-bottom: 10px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 5%;
+			width: 11px;
+			height: 14px;
+			background: url(../img/dest/adress-pick.svg) no-repeat center;
+		}
+	}
+
+	&__tel {
+		position: relative;
+		padding-left: 18px;
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 30%;
+			width: 14px;
+			height: 14px;
+			background: url(../img/dest/adress-phone.svg) no-repeat center;
+		}
+
+		a {
+			color: inherit;
+			transition: color 0.5s;
+			&:hover {
+				text-decoration: none;
+				color: $accent;
+			}
+		}
+
+	}
+
+	&__btn {
+		display: block;
+		margin: 0 auto;
+		max-width: 226px;
+	}
+	
+	.owl-carousel {
+		.owl-item {
+			padding: 15px 5px;
+
+			img {
+				width: auto;
+			}
+		}
+		
+	}
+	.owl-theme .owl-dots {
+		margin-top: 0;
+		@include media-breakpoint-down(sm) { margin-top: -5px; }
+	}
+
+}

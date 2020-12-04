@@ -1,0 +1,27 @@
+.btn {
+	padding: 10px 12px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 700;
+	text-align: center;
+	border: 1px solid $accent;
+	border-radius: 1px;
+
+	@include media-breakpoint-down(sm) { font-size: 14px; line-height: 16px; padding: 9px 10px;}
+
+	transition: all 0.5s;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.btn-o {
+	color: $accent;
+	background-color: transparent;
+
+	&:hover, &:active, &:focus {
+		color: #fff;
+		background-color: $accent;
+	}
+}

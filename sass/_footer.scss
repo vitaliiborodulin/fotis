@@ -1,0 +1,66 @@
+.footer {
+	min-height: 370px;
+	background: #B8C8D0;
+	background-color: #3A3F45;
+
+	font-size: 16px;
+	line-height: 22px;
+	@include media-breakpoint-down(sm) { font-size: 14px;	line-height: 20px; }
+
+	&__title {
+		margin-bottom: 15px;
+
+		font-size: 20px;
+		line-height: 23px;
+		@include media-breakpoint-down(sm) { font-size: 16px; line-height: 18px; }
+
+		color: #FFFFFF;
+		// text-align: left;
+		text-transform: uppercase;
+	}
+
+	&__contacts, &__menu {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+		@include media-breakpoint-down(md) { margin-bottom: 35px; }
+		@include media-breakpoint-down(sm) { margin-bottom: 25px; }
+
+		li:not(:last-child) {
+			margin-bottom: 18px;
+			@include media-breakpoint-down(sm) { margin-bottom: 10px; }
+		}
+	}
+
+	&__link {
+		text-decoration-line: underline;
+	}
+
+	&__nav {
+		padding-left: 60px;
+		@include media-breakpoint-down(md) { padding-left: 0; }
+	}
+
+	&__menu {
+		max-width: 280px;
+		a {
+			color: inherit;
+			transition: color 0.5s;
+			&:hover {
+				color: $accent;
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__socials {
+		text-align: right;
+		@include media-breakpoint-down(md) { text-align: left; }
+		@include media-breakpoint-down(sm) { margin-bottom: 25px; }
+	}
+
+	&__payment {
+		margin-top: -20px;
+		@include media-breakpoint-down(md) { margin-top: 0; }
+	}
+}

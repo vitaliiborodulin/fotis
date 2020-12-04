@@ -1,0 +1,45 @@
+.find {
+	background-color: #E5E5E5;
+
+	.section-title {
+		@include media-breakpoint-down(sm) { margin-bottom: 15px; }
+	}
+
+	&__item {
+		position: relative;
+		max-width: 475px;
+		margin: 0 auto;
+		padding-left: 20px;
+		border-left: 1px solid $accent;
+
+		font-size: 16px;
+		line-height: 22px;
+		@include media-breakpoint-down(sm) { font-size: 14px; line-height: 20px; max-width: 80%;}
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: -40px;
+			top: 50%;
+			transform: translateY(-50%);
+			font-size: 30px;
+			font-weight: 700;
+			color: $accent;
+		}
+
+		&--1 {
+			@include media-breakpoint-down(md) { margin-bottom: 30px; }
+			@include media-breakpoint-down(sm) { margin-bottom: 15px; }
+			&::before {
+				content: '1';
+			}
+		}
+
+		&--2 {
+			&::before {
+				content: '2';
+			}
+		}
+	}
+
+}

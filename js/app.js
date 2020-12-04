@@ -9,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
     nav:true,
     responsive:{
         0:{
-            items:1,
-						center:true
+          items:1,
+						// center:true
 				},
 				600: {
 					items:2
@@ -24,12 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	$('.news__list').owlCarousel({
 		loop:true,
 		dots: true,
-    // margin:10,
-    nav:true,
+    margin:30,
+		nav:true,
     responsive:{
         0:{
-            items:1
-        }
+					items:1
+        },
+				1200: {
+					items:2
+				}
     }
 	})
 

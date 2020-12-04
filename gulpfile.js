@@ -11,6 +11,8 @@ const rename       = require('gulp-rename')
 const imagemin     = require('gulp-imagemin')
 const newer        = require('gulp-newer')
 const del          = require('del')
+const ghPages      = require('gh-pages');
+const pathDeploy   = require('path');
 
 function browsersync() {
 	browserSync.init({
@@ -80,10 +82,15 @@ function startwatch() {
 	watch(`app/**/*.{${fileswatch}}`, { usePolling: true }).on('change', browserSync.reload)
 }
 
+function deploy(cb) {
+	ghPages.publish(pathDeploy.join(process.cwd(), './app'), cb);
+}
+
 exports.assets   = series(cleanimg, scripts, images)
 exports.html     = html
 exports.scripts  = scripts
 exports.styles   = styles
 exports.images   = images
 exports.cleanimg = cleanimg
+exports.deploy   = deploy
 exports.default  = series(html, scripts, images, styles, parallel(browsersync, startwatch))

@@ -1,0 +1,56 @@
+.owl-carousel {
+  position: relative;
+}
+
+.owl-theme {
+
+	.owl-nav {
+		position: absolute;
+		top: 38%;
+		// transform: translateY(-50%);
+		width: 100%;
+		font-size: 0!important;
+
+		.owl-prev, .owl-next {
+			position: absolute;
+			width: 6px;
+			height: 12px;
+			outline: none;
+			background: url('../img/dest/slider-arrow-left.svg') no-repeat!important;
+		}
+		
+		.owl-prev {
+			left: -15px;
+		}
+		
+		.owl-next {
+			transform: rotate(180deg);
+			right: -15px;
+		}
+	}
+
+	.owl-dots {
+		margin-top: 6px;
+		text-align: center;
+
+		.owl-dot {
+			margin-right: 9px;
+			outline: none;
+			span {
+				display: inline-block;
+				border-radius: 50%;
+				width: 8px;
+				height: 8px;
+				background: none;
+				border: 1px solid #B8C8D0;
+			}
+		}
+
+		.owl-dot.active {
+			span {
+				background: #B8C8D0;
+				border: 1px solid #B8C8D0;
+			}
+		}
+	}
+}

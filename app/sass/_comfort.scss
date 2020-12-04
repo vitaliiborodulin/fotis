@@ -1,0 +1,50 @@
+.comfort {
+
+	&__item {
+		margin: 0 auto;
+		margin-bottom: 35px;
+		max-width: 220px;
+		@include media-breakpoint-down(sm) { margin-bottom: 25px; }
+
+		&--1 {
+			.comfort__title {
+				background: url(../img/dest/comfort-1.svg) no-repeat 20px center;
+			}
+		}
+		&--2 {
+			.comfort__title {
+				background: url(../img/dest/comfort-2.svg) no-repeat 20px center;
+			}
+		}
+		&--3 {
+			margin-bottom: 0;
+
+			.comfort__title {
+				padding-left: 80px;
+				background: url(../img/dest/comfort-3.svg) no-repeat 20px center;
+			}
+		}
+	}
+
+	&__title {
+		padding-left: 70px;
+		min-height: 32px;
+		margin-bottom: 22px;
+		font-size: 20px;
+		line-height: 32px;
+		@include media-breakpoint-down(sm) { font-size: 16px; margin-bottom: 24px;}
+		font-weight: 700;
+
+		color: $accent;
+	}
+
+	&__descr {
+		// padding: 5px 0;
+		padding-left: 20px;
+		font-size: 16px;
+		line-height: 22px;
+		@include media-breakpoint-down(sm) { font-size: 14px; line-height: 20px;}
+		color: $textcolor;
+		border-left: 1px solid $accent;
+	}
+}

@@ -1,0 +1,70 @@
+// USER VARIABLES SECTION
+
+$accent: #E31E24; // Accent Color
+$textcolor: #717E85; // Text Color
+$lineheight: 1.65; // Document Line Height
+$userfont: Helvetica, sans-serif; // User Font Family
+$systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
+
+// Bootstrap compatible gutter variable => $gutter
+$grid-gutter-width: 30px;
+$gutter: $grid-gutter-width;
+
+// IMPORT SECTION
+
+@import 'node_modules/bootstrap/scss/bootstrap-reboot.scss'; // Bootstrap Reboot collection
+@import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss'; // Bootstrap Breakpoints mixin
+@import 'node_modules/bootstrap/scss/bootstrap-grid.scss'; // Optional Bootstrap Grid
+// @import 'node_modules/bootstrap/scss/utilities/_sizing.scss'; // Optional Bootstrap Utilites
+@import 'node_modules/owl.carousel/dist/assets/owl.carousel';
+
+// FONTS LOAD SECTION
+
+@font-face {
+	font-family: Helvetica;
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src:
+		url(../fonts/helvetica-regular.woff2) format('woff2'),
+		url(../fonts/helvetica-regular.woff) format('woff');
+}
+
+@font-face {
+	font-family: Helvetica;
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src:
+		url(../fonts/helvetica-bold.woff2) format('woff2'),
+		url(../fonts/helvetica-bold.woff) format('woff');
+}
+
+// GENERAL DOCUMENT STYLES
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+
+input, textarea {
+	outline: none;
+	&:focus:required:invalid { border-color: red }
+	&:required:valid { border-color: green }
+}
+
+body {
+	font-family: $userfont;
+	font-size: 14px;
+	@include media-breakpoint-up(md) { font-size: 16px; }
+	line-height: $lineheight;
+	font-weight: 400;
+	color: $textcolor;
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}

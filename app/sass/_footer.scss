@@ -58,10 +58,14 @@
 		@include media-breakpoint-down(md) { text-align: left; }
 		@include media-breakpoint-down(sm) { margin-bottom: 25px; }
 
+		.ya-share2__item:not(:last-child) {
+			margin-right: 10px!important;
+		}
+
 		.ya-share2__icon {
-			height: 30px!important;
-			width: 30px!important;
-			background-size: 30px 30px!important;
+			height: 32px!important;
+			width: 32px!important;
+			background-size: 32px 32px!important;
 		}
 	}
 

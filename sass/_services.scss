@@ -211,6 +211,11 @@
 		// padding: 10px;
 		padding-left: 18px;
 
+		&:hover, &:active, &:focus {
+			transition: color 0.5s;
+			color: $accent;
+		}
+
 		&::before {
 			content: '';
 			display: block;

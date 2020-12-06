@@ -7,21 +7,20 @@
 	border: 1px solid $accent;
 	border-radius: 1px;
 
+	color: $accent;
+	background-color: #fff;
+
 	@include media-breakpoint-down(sm) { font-size: 14px; line-height: 16px; padding: 9px 10px;}
 
 	transition: all 0.5s;
 
-	&:hover {
+	&:hover, &:active, &:focus {
+		color: #fff;
+		background-color: $accent;
 		text-decoration: none;
 	}
 }
 
 .btn-o {
-	color: $accent;
 	background-color: transparent;
-
-	&:hover, &:active, &:focus {
-		color: #fff;
-		background-color: $accent;
-	}
 }

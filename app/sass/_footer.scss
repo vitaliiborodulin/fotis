@@ -57,6 +57,12 @@
 		text-align: right;
 		@include media-breakpoint-down(md) { text-align: left; }
 		@include media-breakpoint-down(sm) { margin-bottom: 25px; }
+
+		.ya-share2__icon {
+			height: 30px!important;
+			width: 30px!important;
+			background-size: 30px 30px!important;
+		}
 	}
 
 	&__payment {

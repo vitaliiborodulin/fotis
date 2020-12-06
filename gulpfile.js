@@ -49,7 +49,7 @@ function scripts() {
 function html() {
 	return src('app/html/*.html')
 	.pipe(rigger())
-	.pipe(htmlmin({ collapseWhitespace: true }))
+	// .pipe(htmlmin({ collapseWhitespace: true }))
 	.pipe(dest('app'))
 	.pipe(browserSync.stream())
 }
